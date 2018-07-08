@@ -5,5 +5,5 @@
 
 ## 使用方法
 
-> $ npm i babytree-cli -g
+> $ npm i babytree-cli -g  
   $ babytree init my-project
