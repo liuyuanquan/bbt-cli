@@ -122,18 +122,15 @@ const start = async () => {
     templatePath = path.resolve(home, '.babytree-templates/', template)
   }
   // 下载模板
-  // download(repo, templatePath).then((status) => {
-  //   if (status) {
-  //     // 渲染模板
-  //     generator(projectName, templatePath, projectPath, () => {
-  //       console.log('项目创建成功')
-  //     })
-  //   } else {
-  //     console.log('模板下载失败')
-  //   }
-  // })
-  generator(projectName, templatePath, projectPath, () => {
-    console.log('项目创建成功')
+  download(repo, templatePath).then((status) => {
+    if (status) {
+      // 渲染模板
+      generator(projectName, templatePath, projectPath, () => {
+        console.log('项目创建成功')
+      })
+    } else {
+      console.log('模板下载失败')
+    }
   })
 }
 
