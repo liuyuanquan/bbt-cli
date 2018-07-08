@@ -4,4 +4,6 @@
 工作流程和vue-cli一样，从远端获取模板到本地渲染
 
 ## 使用方法
+
+> $ npm i babytree-cli -g
 > $ babytree init my-project
