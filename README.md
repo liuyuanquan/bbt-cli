@@ -6,4 +6,4 @@
 ## 使用方法
 
 > $ npm i babytree-cli -g
-> $ babytree init my-project
+  $ babytree init my-project
