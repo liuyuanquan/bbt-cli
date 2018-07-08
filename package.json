@@ -1,7 +1,7 @@
 {
   "name": "babytree-cli",
   "version": "1.0.0",
-  "description": "babytree cli tool",
+  "description": "宝宝树CLI",
   "bin": {
     "babytree": "bin/babytree.mjs",
     "babytree-init": "bin/babytree-init.mjs"
