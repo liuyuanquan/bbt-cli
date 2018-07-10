@@ -22,7 +22,44 @@ babytree-cli基于node.js v8.11.1，使用ES6，ES7的写法编写，摒弃了�
 
 工作流程和vue-cli一样，从远端获取模板，根据用户的输入渲染模板  
 
-## 使用方法
+## 使用
 
-> $ npm i babytree-cli -g  
-  $ babytree init my-project
+全局安装：  
+
+```
+  sudo npm i babytree-cli -g     
+
+  babytree init my-project
+```
+
+## babytree-cli 能做什么？
+
+## babytree-cli 是如何工作的？
+
+## 贡献
+
+有任何意见或建议请直接提交 issue 或 PR。您的任何帮助都会让我们开心很久。  
+
+## LICENSE
+
+MIT License
+
+Copyright (c) 2018 pandolajs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
