@@ -3,8 +3,8 @@ import inquirer from 'inquirer' // 命令行交互
 import program from 'commander' // 用来处理命令行
 import chalk from 'chalk' // 高亮
 import home from 'user-home' // 获取用户的根目录
-import download from '../lib/download.mjs' // 下载仓库
-import generator from '../lib/generator.mjs' // 渲染模板
+import download from '../src/download.mjs' // 下载仓库
+import generator from '../src/generator.mjs' // 渲染模板
 import fs from 'fs'
 import path from 'path'
 

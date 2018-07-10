@@ -44,7 +44,7 @@ babytree-cli基于node.js v8.11.1，使用ES6，ES7的写法编写，摒弃了�
 
 MIT License
 
-Copyright (c) 2018 pandolajs
+Copyright (c) 2018 babytree-cli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

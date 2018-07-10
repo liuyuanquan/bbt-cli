@@ -1,8 +1,9 @@
 {
   "name": "babytree-cli",
   "version": "1.0.1",
-  "description": "宝宝树CLI",
+  "description": "babytree-cli",
   "bin": {
+    "baby": "bin/babytree.mjs",
     "babytree": "bin/babytree.mjs",
     "babytree-init": "bin/babytree-init.mjs"
   },
@@ -13,8 +14,12 @@
   "bugs": {
     "url": "https://github.com/liuyuanquan/babytree-cli/issues"
   },
+  "keywords": [
+    "babytree-cli"
+  ],
+  "homepage": "https://github.com/liuyuanquan/babytree-cli#readme",
   "author": "liuyuanquan",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.16.0",
