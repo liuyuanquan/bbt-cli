@@ -1,6 +1,7 @@
 import MetalSmith from 'metalsmith' // HTML静态页面生成器
 import handleBars from 'handlebars' // 模板引擎
 import inquirer from 'inquirer' // 命令行交互
+import gitConfig from 'git-config' // 相当于 git config --list
 import { runCommand } from './utils.mjs'
 import path from 'path'
 import fs from 'fs'
