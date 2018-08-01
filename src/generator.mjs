@@ -3,6 +3,7 @@ import handleBars from 'handlebars' // 模板引擎
 import inquirer from 'inquirer' // 命令行交互
 import gitConfig from 'git-config' // 相当于 git config --list
 import { runCommand } from './utils.mjs'
+import log from './log.mjs'
 import path from 'path'
 import fs from 'fs'
 
@@ -21,7 +22,7 @@ const askQuestions = prompts => {
     const metadata = metalsmith.metadata()
     for (let name of Object.keys(prompts)) {
       const question = prompts[name]
-      const { message, type, _default, choices } = question
+      const { message, type, default: _default, choices } = question
       let option = { name, message, type, default: _default }
       if (Object.is(type, 'list')) {
         option = { ...option, choices }
@@ -58,14 +59,27 @@ const renderFiles = () => {
   }
 }
 
-export default (projectName, templatePath, projectPath, done) => {
+export default async (projectName, templatePath, projectPath, done) => {
   let options
   // 读取meta.json
   try {
     options = fs.readFileSync(path.resolve(templatePath, 'meta.json'), { encoding: 'utf-8' })
     options = JSON.parse(options)
+    // prompts 添加默认值
+    for (let name of Object.keys(options.prompts)) {
+      if (Object.is(name, 'name')) {
+        let question = options.prompts[name]
+        question.default = projectName
+      }
+      if (Object.is(name, 'author')) {
+        let question = options.prompts[name]
+        // 获取git config --global
+        const author = await runCommand('git', ['config', '--global', 'user.name'])
+        question.default = author
+      }
+    }
   } catch(error) {
-    console.log('meta.json读取失败')
+    log.error('meta.json读取失败')
     return 
   }
   // 初始化metalSmith实例
@@ -83,14 +97,14 @@ export default (projectName, templatePath, projectPath, done) => {
     .destination(projectPath)
     .build(async (error, files) => {
       if (error) {
-        console.log(error)
+        log.error(error)
         return 
       } 
       // 是否自动运行npm install
       const autoInstall = metalSmith.metadata()['autoInstall']
       if (autoInstall) {
         const cwd = projectPath
-        console.log('正在安装依赖......')
+        log.info('正在安装依赖......')
         await runCommand('npm', ['install'], { cwd })
         done()
       } else {

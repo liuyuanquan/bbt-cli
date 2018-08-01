@@ -4,7 +4,10 @@ import config from '../package.json'
 
 program
   .version(config.version)
+  .option('-v, --version', 'output the version number', () => {
+    console.log(config.version)
+  })
   .usage('<command> [options]')
-  .command('init', '使用一个模板初始化你的项目')
+  .command('init', '使用模板初始化项目')
 
 program.parse(process.argv)

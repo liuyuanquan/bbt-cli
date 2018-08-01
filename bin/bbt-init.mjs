@@ -5,6 +5,7 @@ import chalk from 'chalk' // 高亮
 import home from 'user-home' // 获取用户的根目录
 import download from '../src/download.mjs' // 下载仓库
 import generator from '../src/generator.mjs' // 渲染模板
+import log from '../src/log.mjs' // 渲染模板
 import fs from 'fs'
 import path from 'path'
 
@@ -21,10 +22,11 @@ const start = async () => {
   program
     .usage('[项目名称]')
     .on('--help', () => {
+      console.log()
       console.log('  Examples:')
       console.log()
       console.log(chalk.gray('    # 初始化你的项目'))
-      console.log('    $ babytree init my-project')
+      console.log('    $ bbt init my-project')
       console.log()
     })
     .parse(process.argv)
@@ -64,7 +66,7 @@ const start = async () => {
       return isDir && Object.is(name, projectName)
     })  
     if (exist) {
-      console.log(chalk.red(`项目${ projectName }已存在`))
+      log.error(`项目${ projectName }已存在`)
       return
     } else {
       projectPath = path.resolve(rootPath, projectName)
@@ -126,10 +128,10 @@ const start = async () => {
     if (status) {
       // 渲染模板
       generator(projectName, templatePath, projectPath, () => {
-        console.log('项目创建成功')
+        log.success('项目创建成功')
       })
     } else {
-      console.log('模板下载失败')
+      log.error('模板下载失败')
     }
   })
 }

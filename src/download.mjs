@@ -34,10 +34,3 @@ export default (repo, dist) => {
     return false
   })
 }
-
-
-
-
-new Promise((resolve, reject) => {  
-
-})

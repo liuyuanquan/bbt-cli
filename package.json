@@ -1,23 +1,24 @@
 {
-  "name": "babytree-cli",
-  "version": "1.0.2",
-  "description": "babytree-cli",
+  "name": "bbt-cli",
+  "version": "1.0.0",
+  "description": "bbt-cli",
   "bin": {
-    "baby": "bin/babytree.mjs",
-    "babytree": "bin/babytree.mjs",
-    "babytree-init": "bin/babytree-init.mjs"
+    "bbt": "bin/bbt.mjs",
+    "babytree": "bin/bbt.mjs",
+    "bbt-init": "bin/bbt-init.mjs",
+    "babytree-init": "bin/bbt-init.mjs"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:liuyuanquan/babytree-cli.git"
+    "url": "git@github.com:liuyuanquan/bbt-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/liuyuanquan/babytree-cli/issues"
+    "url": "https://github.com/liuyuanquan/bbt-cli/issues"
   },
   "keywords": [
-    "babytree-cli"
+    "bbt-cli"
   ],
-  "homepage": "https://github.com/liuyuanquan/babytree-cli#readme",
+  "homepage": "https://github.com/liuyuanquan/bbt-cli#readme",
   "author": "liuyuanquan",
   "license": "MIT",
   "dependencies": {
