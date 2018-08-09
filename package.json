@@ -31,6 +31,11 @@
     "metalsmith": "^2.3.0",
     "ora": "^2.1.0",
     "rimraf": "^2.6.2",
-    "user-home": "^2.0.0"
+    "user-home": "^2.0.0",
+    "multiline": "*",
+    "colors": "*",
+    "fs-extra": "*",
+    "path": "*",
+    "@bbt/babytree-ui": "*"
   }
 }
