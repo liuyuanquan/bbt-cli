@@ -1,0 +1,41 @@
+{
+  "name": "bbt-cli",
+  "version": "1.0.0",
+  "description": "bbt-cli",
+  "bin": {
+    "bbt": "bin/bbt.mjs",
+    "babytree": "bin/bbt.mjs",
+    "bbt-init": "bin/bbt-init.mjs",
+    "babytree-init": "bin/bbt-init.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:liuyuanquan/bbt-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyuanquan/bbt-cli/issues"
+  },
+  "keywords": [
+    "bbt-cli"
+  ],
+  "homepage": "https://github.com/liuyuanquan/bbt-cli#readme",
+  "author": "liuyuanquan",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0",
+    "download-git-repo": "^1.0.2",
+    "git-config": "0.0.7",
+    "handlebars": "^4.0.11",
+    "inquirer": "^6.0.0",
+    "metalsmith": "^2.3.0",
+    "ora": "^2.1.0",
+    "rimraf": "^2.6.2",
+    "user-home": "^2.0.0",
+    "multiline": "*",
+    "colors": "*",
+    "fs-extra": "*",
+    "path": "*",
+    "@bbt/babytree-ui": "*"
+  }
+}
