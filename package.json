@@ -6,7 +6,9 @@
     "bbt": "bin/bbt.mjs",
     "babytree": "bin/bbt.mjs",
     "bbt-init": "bin/bbt-init.mjs",
-    "babytree-init": "bin/bbt-init.mjs"
+    "bbt-upgrade": "bin/bbt-upgrade.mjs",
+    "babytree-init": "bin/bbt-init.mjs",
+    "babytree-upgrade": "bin/bbt-upgrade.mjs"
   },
   "repository": {
     "type": "git",

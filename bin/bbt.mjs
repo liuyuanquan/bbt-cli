@@ -8,6 +8,7 @@ program
     console.log(config.version)
   })
   .usage('<command> [options]')
-  .command('init', '使用模板初始化项目')
+  .command('init', '初始化项目')
+  .command('upgrade', '更新脚手架')
 
 program.parse(process.argv)
